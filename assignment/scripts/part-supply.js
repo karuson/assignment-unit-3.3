@@ -35,11 +35,11 @@ console.log(supplyChanges);
 //    - if the value is negative, format the log as 'Removed x parts.' 
 console.log('6. Showing supplyChanges...');
 for (let x = 0; x < supplyChanges.length; x++) {
-    if(supplyChanges[x] > 0) {
+    if (supplyChanges[x] > 0) {
         console.log('Added', supplyChanges[x], 'parts.');
-    } else if(supplyChanges === 0) {
+    } else if (supplyChanges[x] === 0) {
         console.log('No Change.');
-    } else if (supplyChanges < 0) {
+    } else if (supplyChanges[x] < 0) {
         console.log('Removed', supplyChanges[x], 'parts.');
     } // end if 
 } // end for
@@ -49,10 +49,10 @@ console.log('---  Stretch Goals  ---');
 // 7. Rewrite the `for` loop from #6 as a `for of` loop. 
 console.log('7. Showing supplyChanges with "for of" loop');
 for (x of supplyChanges) {
-    if (supplyChanges[x] > 0) {
+    if (x > 0) {
         console.log('Added', x, 'parts.');
     } else if (x === 0) {
-        console.log('No change.');
+        console.log('No Change.');
     } else if (x < 0) {
         console.log('Removed', x, 'parts.')
     }
@@ -69,3 +69,22 @@ console.log('8. Total supplies available is:');
 //    no more boxes can be filled.
 //    Then log how many boxes were filled, and how many parts are left over.
 console.log('9. Filling boxes with a "while" loop');
+let totalParts = 572;
+let shipment = [];
+
+console.log(totalParts);
+// while loop
+while (totalParts > 0) {
+    // if else
+    if (totalParts > 6) {
+        shipment.push(7);
+        totalParts -= 7;
+    } else {
+        let leftoverParts = totalParts;
+    } // end if else
+} // end while
+console.log(shipment.length);
+let totalBoxes = shipment.length + 1;
+console.log(totalBoxes, 'needed for shipment.');
+console.log('We have', leftoverParts, 'parts leftover.')
+
