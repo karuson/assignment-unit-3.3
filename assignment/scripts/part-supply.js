@@ -74,17 +74,31 @@ let shipment = [];
 
 console.log(totalParts);
 // while loop
-while (totalParts > 0) {
-    // if else
-    if (totalParts > 6) {
-        shipment.push(7);
-        totalParts -= 7;
-    } else {
-        let leftoverParts = totalParts;
-    } // end if else
+while (totalParts > 6) {
+    // This will subtract 7 from totalParts and add 1 'box' to our shipment array until
+    // the parts left cannot fill a box.
+    totalParts -= 7;
+    shipment.push('box');
 } // end while
-console.log(shipment.length);
-let totalBoxes = shipment.length + 1;
-console.log(totalBoxes, 'needed for shipment.');
-console.log('We have', leftoverParts, 'parts leftover.')
+
+// After while loop we want to find out how many parts were left over and log it.
+console.log('There are', totalParts, 'parts left.');
+// Our shipment array length will give us a count for boxes that we will console log.
+console.log('We need', shipment.length, 'boxes.');
+
+// I took a intro java college course a long time ago and randomly remembered that I could get
+// a remainder, which reminded me I could round down to the nearest whole number too.
+
+// So just for fun we will reset totalParts to 572..
+totalParts = 572;
+// The remainder of totalParts / 7 will get us whatever is left over that can't fill a box
+// We'll assign that to a variable
+let leftoverParts = totalParts % 7;
+// We can divide our totalParts by 7, then round down to the nearest whole number 
+// to get our totalBoxes
+totalBoxes = Math.floor(totalParts / 7);
+// We will console log leftoverParts and totalBoxes so we can see our answers 
+// and double check the math
+console.log('We have', leftoverParts, 'parts left.');
+console.log('We need', totalBoxes, 'boxes.')
 
