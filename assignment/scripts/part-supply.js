@@ -90,7 +90,7 @@ console.log('We need', shipment.length, 'boxes.');
 // a remainder, which reminded me I could round down to the nearest whole number too.
 
 // So just for fun we will reset totalParts to 572..
-console.log('No loop here!')
+console.log('No loop for you')
 totalParts = 572;
 // The remainder of totalParts / 7 will get us whatever is left over that can't fill a box
 // We'll assign that to a variable
