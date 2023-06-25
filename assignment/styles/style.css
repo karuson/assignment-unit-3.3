@@ -1,1 +1,17 @@
 /* give your assignment a fun background color */
+
+
+
+body {
+    background-color: black;
+    font-family: Georgia, Times, serif;
+    color: white;
+}
+
+header { 
+    border: 6px double rgb(240, 184, 62);
+    outline: 1px solid white;
+    color: rgb(226, 49, 35);
+    font-variant: small-caps;
+    text-align: center;
+}
